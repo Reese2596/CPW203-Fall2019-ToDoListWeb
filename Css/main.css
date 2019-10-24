@@ -16,6 +16,7 @@ div#complete{
     border: 1px dashed rgb(155, 153, 153);
     width: 50%;
     float: right;
+    opacity: .5;
 }
 
 @media only screen and (max-width: 600px) {
