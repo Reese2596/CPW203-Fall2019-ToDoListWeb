@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Free online todo list tracker. Manage todos free online.">
     <script src="JavaScript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="Css/main.css">
     <title>Free Online ToDo List</title>
 </head>
@@ -18,7 +20,7 @@
         <br>
 
         <input type="text" placeholder="Deadline" name="deadline"
-                id="deadline" aria-placeholder="Enter the deadline of the task.">
+                id="datepicker" aria-placeholder="Enter the deadline of the task.">
         <br>
 
         <input type="checkbox"> IsComplete?
@@ -33,5 +35,10 @@
     <div id="complete">
 
     </div>
+
+    <script src="pikaday.js"></script>
+    <script>
+        var picker = new Pikaday({ field: document.getElementById('datepicker') });
+    </script>
 </body>
 </html>
