@@ -1,0 +1,37 @@
+#todo, #complete{
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: lavender;
+}
+
+div#todo{
+    border: 1px dashed black;
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+}
+
+div#complete{
+    border: 1px dashed rgb(155, 153, 153);
+    width: 50%;
+    float: right;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: aliceblue;
+    }
+    div#todo, div#complete{
+        background-color: whitesmoke;
+        width: 100%;
+    }
+    div#todo{
+        float: none;
+        margin-bottom: 10px;
+        margin-right: 0%;
+    }
+    div#complete{
+        float: none;
+    }
+}
