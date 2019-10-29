@@ -1,8 +1,11 @@
+body{
+    background-color: lavender;
+}
 #todo, #complete{
     box-sizing: border-box;
     border-radius: 5px;
     padding: 3px;
-    background-color: lavender;
+    background-color: whitesmoke;
 }
 
 div#todo{
@@ -16,15 +19,12 @@ div#complete{
     border: 1px dashed rgb(155, 153, 153);
     width: 50%;
     float: right;
-    opacity: .5;
+    opacity: .6;
 }
 
+
 @media only screen and (max-width: 600px) {
-    body{
-        background-color: aliceblue;
-    }
     div#todo, div#complete{
-        background-color: whitesmoke;
         width: 100%;
     }
     div#todo{
