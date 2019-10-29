@@ -12,12 +12,24 @@ class ToDoItem{
     }
 }
 
-let myItem = new ToDoItem("Wrap up lecture");
+//test code here
+let myItem = new ToDoItem("Learn about cookies =;");
+myItem.isCompleted = false;
+myItem.deadline = new Date(2019, 10, 29);
+
+//Converts to a json string format
+let strData = JSON.stringify(myItem);
+//console.log(strData);
+
+//Setting a cookie called todo items that expire in a week
+Cookies.set("ToDoItems", strData, {expires : 7});
+//End Test Code
 
 window.onload = function(){
     let btnElem = <HTMLElement> document.querySelector("form > input[type=button]");
     btnElem.onclick = main;    
 }
+
 
 function main(){
     let item:ToDoItem = getItem();
@@ -49,7 +61,7 @@ function displayToDoItem(item:ToDoItem):void{
     let displaydiv = document.getElementById("todo");
     displaydiv.appendChild(div);
 
-    console.log(div);
+    //console.log(div);
 }
 
 /**
@@ -59,7 +71,7 @@ function getItem():ToDoItem{
     let title = (<HTMLInputElement> document.getElementById("title")).value;
     let item = new ToDoItem(title);
 
-    let deadline = (<HTMLInputElement> document.getElementById("deadline")).value;
+    let deadline = (<HTMLInputElement> document.getElementById("datepicker")).value;
     item.deadline = new Date(deadline);
 
     //TODO change to input value
