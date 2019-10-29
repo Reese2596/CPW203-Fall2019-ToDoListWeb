@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Free online todo list tracker. Manage todos free online.">
-    <script src="JavaScript/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="Css/main.css">
@@ -30,13 +29,17 @@
         <br><br>
     </form>
     <div id="todo">
+        <h2>To Do:</h2>
         
     </div>
     <div id="complete">
+        <h2>Completed:</h2>
 
     </div>
 
-    <script src="pikaday.js"></script>
+    <script src="JavaScript/js.cookie.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/pikaday.js"></script>
     <script>
         var picker = new Pikaday({ field: document.getElementById('datepicker') });
     </script>
